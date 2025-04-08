@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Responsive Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+             max-width: 1200px; 
+            width: 100%;
+            
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            .card {
+                max-width: 48%;
+            }
+        }
+        @media (min-width: 901px) {
+            .card {
+                max-width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="pink-flowers-float-clear-waters-hawaii-soft-white-sand-below-347952870.webp" alt="Image 1">
+            <div class="card-content">
+                <h3>Card Title 1</h3>
+                <p>This is a description of the first card.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="lincoln-red-rose-bush-types.jpg" alt="Image 2">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <p>This is a description of the second card.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="close-up-image-of-the-beautiful-late-summer-royalty-free-image-1720644213.avif" alt="Image 3">
+            <div class="card-content">
+                <h3>Card Title 3</h3>
+                <p>This is a description of the third card.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
